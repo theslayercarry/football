@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F60429C-EF29-448D-9F81-9CF92484AEB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>football</RootNamespace>
+    <AssemblyName>football</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.0.33\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about_match.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about_match.Designer.cs">
+      <DependentUpon>about_match.cs</DependentUpon>
+    </Compile>
+    <Compile Include="about_player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about_player.Designer.cs">
+      <DependentUpon>about_player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="about_team.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about_team.Designer.cs">
+      <DependentUpon>about_team.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="all_matches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="all_matches.Designer.cs">
+      <DependentUpon>all_matches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matches.Designer.cs">
+      <DependentUpon>matches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matches_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matches_add.Designer.cs">
+      <DependentUpon>matches_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="matches_change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="matches_change.Designer.cs">
+      <DependentUpon>matches_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="match_stadion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="match_stadion.Designer.cs">
+      <DependentUpon>match_stadion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="other_tables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="other_tables.Designer.cs">
+      <DependentUpon>other_tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="players.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="players.Designer.cs">
+      <DependentUpon>players.cs</DependentUpon>
+    </Compile>
+    <Compile Include="players_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="players_add.Designer.cs">
+      <DependentUpon>players_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="players_change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="players_change.Designer.cs">
+      <DependentUpon>players_change.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="teams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teams.Designer.cs">
+      <DependentUpon>teams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teams_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teams_add.Designer.cs">
+      <DependentUpon>teams_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teams_change.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teams_change.Designer.cs">
+      <DependentUpon>teams_change.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="about_match.resx">
+      <DependentUpon>about_match.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="about_player.resx">
+      <DependentUpon>about_player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="about_team.resx">
+      <DependentUpon>about_team.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="all_matches.resx">
+      <DependentUpon>all_matches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matches.resx">
+      <DependentUpon>matches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matches_add.resx">
+      <DependentUpon>matches_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="matches_change.resx">
+      <DependentUpon>matches_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="match_stadion.resx">
+      <DependentUpon>match_stadion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="other_tables.resx">
+      <DependentUpon>other_tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="players.resx">
+      <DependentUpon>players.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="players_add.resx">
+      <DependentUpon>players_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="players_change.resx">
+      <DependentUpon>players_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="teams.resx">
+      <DependentUpon>teams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teams_add.resx">
+      <DependentUpon>teams_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teams_change.resx">
+      <DependentUpon>teams_change.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_color4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\football_field_top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ff_t2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mbappe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bruno_fernandez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hulian_alvarez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\harry_kane.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portugalia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\argentina.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marocco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\france.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mexica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\germany.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kosta_rico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anglia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\switzerland.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belgia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stadion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
